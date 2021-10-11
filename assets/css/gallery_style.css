@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/**
+ * photo_style.css
+ */
+/**
+ * Variables
+ */
+:root {
+  --white: #ffffff;
+  --gray: #a2a2a2;
+  --pink: #268d94;
+  --pink-dark: #1e996a;
+  --orange: #f5a906;
+  --orange-dark: #ff3c00;
+  --black-op-85: rgba(0, 0, 0, 0.85);
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+.container {
+  width: 60%;
+  margin: auto;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/**
+ * Barre de navigation
+ */
+nav {
+  /* La dernière valeur correspond à l'opacité de la couleur */
+  background-color: #292525;
+  text-transform: uppercase;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+/* L'espace est similaire à "à l'intérieur" */
+nav .container {
+  display: flex;
+  /* Horizontal */
+  align-items: center;
+  /* Vertical */
+  height: 65px;
+}
+
+nav .container a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  width: 20%;
+}
+
+nav .container ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav .container ul a {
+  opacity: 0.5;
+  transition: opacity 500ms;
+}
+
+nav .container ul a:hover {
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
+.grid {
+  padding-top: 75px;
+}
+
+.grid-item {
+  width: 200px;
+  margin-bottom: 10px;
+}/*# sourceMappingURL=gallery_style.css.map */

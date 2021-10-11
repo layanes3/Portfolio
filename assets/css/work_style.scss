@@ -1,0 +1,295 @@
+/**
+ * style.css
+ */
+
+/**
+ * Variables
+ */
+ :root {
+    --white: #ffffff;
+    --gray: #a2a2a2;
+    --pink: #268d94;
+    --pink-dark: #1e996a;
+    --orange: #f5a906;
+    --orange-dark: #ff3c00;
+    --black-op-85: rgba(0, 0, 0, 0.85);
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/**
+ * Barre de navigation
+ */
+nav {
+    /* La dernière valeur correspond à l'opacité de la couleur */
+    background-color:rgb(41, 37, 37);
+    text-transform: uppercase;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.50;
+    text-align: center;
+}
+
+/* L'espace est similaire à "à l'intérieur" */
+nav .container {
+    display: flex;
+    justify-content: center; /* Horizontal */
+    align-items: center; /* Vertical */
+    height: 65px;
+}
+
+nav .container a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    width: 20%;
+}
+
+nav .container ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav .container ul a {
+    opacity: 0.5;
+    transition: opacity 500ms;
+}
+
+nav .container ul a:hover {
+    opacity: 1;
+    transition: opacity 500ms;
+}
+
+nav img {
+    width: 20%;
+    display: block;
+    background: white;
+}
+
+/**
+ * Header
+ */
+header {
+    background: linear-gradient(to right, var(--pink), var(--orange));
+    color: var(--white);
+    text-align: center;
+    padding: 50px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    display: flex;
+    justify-content: flex-start;
+}
+
+header h2 {
+    font-size: 2em;
+    margin-top: 10px;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+header .btn {
+    color: var(--white);
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: var(--pink-dark);
+    padding: 10px 21px; /* 1er : haut et bas, 2ème : droite et gauche */
+    border-radius: 100px;
+    letter-spacing: 0.1em;
+    transition: background-color 500ms;
+    font-size: small;
+}
+
+header .btn:hover {
+    background-color: var(--orange-dark);
+    transition: background-color 500ms;
+}
+
+
+
+
+
+/**
+ * Sections
+ */
+
+
+
+
+
+.container-fluid p {
+    line-height: 2px;
+    align-items: center;
+  
+}
+
+.projet1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    background-image: url('../images/12.jpg');
+    background-size: cover;
+    border-radius: 0px;
+    letter-spacing: 0.1em;
+    transition: background-color 500ms;
+    padding: 0;
+  
+    
+}
+.projet2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    background-image: url('../images/2.jpg');
+    background-size: cover;
+    border-radius:0px;
+    letter-spacing: 0.1em;
+    transition: background-color linear 0.85s, opacity linear 0.85s;
+    padding: 0;
+}
+
+// .projet2:hover {
+//     transition: background-color ease-in-out 0.85s, background-image ease-in-out 0.85s;
+//     background-color: rgba(191,167,116,0.9);
+//     background-image: none;
+  
+// }
+    .overlay-image {
+        transition: background-color linear 300ms;
+        width: 100%;
+        height:100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+
+    .overlay-image:hover {
+        transition: background-color linear 300ms;
+        background-color: rgba(191,167,116,0.9);
+    }
+
+// .overlay-image .hover{
+    
+//     font-size: 2em;
+    
+
+.projet3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    background-image: url('../images/4.jpg');
+    background-size: cover;
+    border-radius: 0px;
+    letter-spacing: 0.1em;
+    transition: background-color 500ms;
+    padding: 0;
+}
+
+.projet4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    background-image: url('../images/32.jpg');
+    background-size: cover;
+    border-radius: 0px;
+    letter-spacing: 0.1em;
+    transition: background-color 500ms;
+    padding: 0;
+}
+
+.projet5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    background-image: url('../images/27.jpg');
+    background-size: cover;
+    border-radius: 0px;
+    letter-spacing: 0.1em;
+    transition: background-color 500ms;
+    padding: 0;
+}
+
+.projet6{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    background-image: url('../images/28.jpg');
+    background-size: cover;
+    border-radius: 0px;
+    letter-spacing: 0.1em;
+    transition: background-color 500ms;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+   
+
+
+main section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 150px; /* Espacement entre les colonnes */
+    margin: 150px 0;
+}
+
+main section h3 {
+    font-size: 4em;
+    font-weight: lighter;
+    margin: 0;
+}
+
+main section img {
+    width: 40%;
+    border-radius: 100%;
+}
+
+/**
+ * Footer
+ */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--gray);
+    border-top: 1px solid var(--gray);
+}
+
+
+
+
+

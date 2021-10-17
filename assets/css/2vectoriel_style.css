@@ -1,6 +1,65 @@
+@charset "UTF-8";
 /**
 variables
 */
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"), url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  font-family: "Montserrat", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+  font-family: "Monoton", cursive;
+  src: url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+  font-family: "Goldman", cursive;
+  src: url("https://fonts.googleapis.com/css2?family=Goldman&display=swap");
+}
+/* Bouton d'ouverture / fermeture */
+#boutonVolet {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #d6d456;
+  cursor: pointer;
+  border-radius: 20px;
+  opacity: 0.6;
+  transition: opacity 1s;
+  z-index: 2000;
+}
+
+#boutonVolet:hover {
+  opacity: 1;
+}
+
+/* Volet gauche */
+#voletGauche {
+  font-family: "Sarabun", sans-serif;
+  background-color: #df2020;
+  text-transform: lowercase;
+  position: absolute;
+  top: 0;
+  left: -70vw;
+  width: 70vw;
+  height: 100vh;
+  background-color: #fff;
+  color: #000;
+  /* Centrage horizontal et vertical */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Transition CSS sur l'opacité */
+  opacity: 1;
+  transition: left 1s linear;
+  z-index: 1000;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.ouvert {
+  left: 0 !important;
+  transition: left 1s linear;
+}
+
+/* Texte Volet Gauche*/
 li {
   text-decoration: none;
   text-transform: none;
@@ -8,27 +67,16 @@ li {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
-img {
-  position: absolute;
-  width: 7%;
-  justify-content: center;
-}
-
-h1 {
-  position: fixed;
+#voletGauche h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;
+  color: #9e0000;
   text-transform: uppercase;
   opacity: 0.2;
   font-size: 70px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-}
-
-span a {
-  text-decoration: none;
-  color: #201f1f;
+  font-size: 10vh;
 }
 
 body {
@@ -37,6 +85,7 @@ body {
 
 #parallax {
   position: absolute;
+  z-index: 100;
   width: 100%;
   height: 100vh;
   background-image: url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-3.png), url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-2.png), url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-1.png);
@@ -55,8 +104,12 @@ h1 {
   text-transform: uppercase;
   opacity: 0.7;
   font-size: 37px;
+  z-index: 200 !important;
 }
 
-ul {
-  display: flexbox;
+span a {
+  text-decoration: none;
+  color: #201f1f;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 0.7em;
 }/*# sourceMappingURL=2vectoriel_style.css.map */

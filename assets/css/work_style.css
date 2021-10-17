@@ -5,6 +5,19 @@
 /**
  * Variables
  */
+/**
+variables
+*/
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"), url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  font-family: "Montserrat", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+  font-family: "Monoton", cursive;
+  src: url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+  font-family: "Goldman", cursive;
+  src: url("https://fonts.googleapis.com/css2?family=Goldman&display=swap");
+}
 :root {
   --white: #ffffff;
   --gray: #a2a2a2;
@@ -16,7 +29,6 @@
 }
 
 body {
-  font-family: "Ubuntu", sans-serif;
   font-size: 16px;
   margin: 0;
 }
@@ -55,6 +67,12 @@ nav .container {
   height: 65px;
 }
 
+nav img {
+  width: 20%;
+  display: block;
+  background: #3b3a3a;
+}
+
 nav .container a {
   color: var(--white);
   text-decoration: none;
@@ -78,61 +96,33 @@ nav .container ul a:hover {
   transition: opacity 500ms;
 }
 
-nav img {
-  width: 20%;
-  display: block;
-  background: white;
-}
-
-/**
- * Header
- */
-header {
-  background: linear-gradient(to right, var(--pink), var(--orange));
-  color: var(--white);
-  text-align: center;
-  padding: 50px 0;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2em;
-  display: flex;
-  justify-content: flex-start;
-}
-
-header h2 {
-  font-size: 2em;
-  margin-top: 10px;
-  margin-bottom: 80px;
-  display: flex;
-  justify-content: flex-start;
-}
-
-header .btn {
-  color: var(--white);
-  text-transform: uppercase;
-  text-decoration: none;
-  background-color: var(--pink-dark);
-  padding: 10px 21px;
-  /* 1er : haut et bas, 2ème : droite et gauche */
-  border-radius: 100px;
-  letter-spacing: 0.1em;
-  transition: background-color 500ms;
-  font-size: small;
-}
-
-header .btn:hover {
-  background-color: var(--orange-dark);
-  transition: background-color 500ms;
-}
-
-/**
- * Sections
- */
 .container-fluid p {
   line-height: 2px;
   align-items: center;
+}
+
+.overlay-image {
+  transition: background-color linear 500ms;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.overlay-image .texte {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+.overlay-image .texte a {
+  text-decoration: none;
+  color: black;
+}
+
+.overlay-image:hover {
+  transition: background-color linear 500ms;
+  background-color: rgba(191, 167, 116, 0.9);
 }
 
 .projet1 {
@@ -140,12 +130,70 @@ header .btn:hover {
   align-items: center;
   justify-content: center;
   height: 600px;
-  background-image: url("../images/projets-acs-music/Splash\ Screen.svg");
+  background-image: url("../images/2.jpg");
   background-size: cover;
   border-radius: 0px;
   letter-spacing: 0.1em;
   transition: background-color 500ms;
   padding: 0;
+  /* Bouton d'ouverture / fermeture */
+  /* Volet gauche */
+  /* Texte Volet Gauche*/
+}
+.projet1 #boutonVolet_p1, .projet1 #voletGauche_p2 {
+  position: relative;
+  text-align: center;
+  padding: 30px 30px;
+  background-color: #ebe70f;
+  padding: 10px 45px;
+  border-radius: 100px;
+  opacity: 0.6;
+  transition: opacity 1s;
+  z-index: 2000;
+}
+.projet1 #boutonVolet_p1:hover, .projet1 #voletGauche_p2:hover {
+  opacity: 1;
+}
+.projet1 #voletGauche_p1, .projet1 #voletGauche_p2 {
+  font-family: "Sarabun", sans-serif;
+  text-transform: lowercase;
+  position: absolute;
+  top: 0;
+  left: -70vw;
+  width: 70vw;
+  height: 100vh;
+  background-color: #fff;
+  color: #000;
+  /* Centrage horizontal et vertical */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Transition CSS sur l'opacité */
+  opacity: 1;
+  transition: left 1s linear;
+  z-index: 1000;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.projet1 .ouvert {
+  left: 0 !important;
+  transition: left 1s linear;
+}
+.projet1 li {
+  text-decoration: none;
+  text-transform: none;
+  color: #ececec;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+.projet1 #voletGauche_p1 h1, .projet1 #voletGauche_p2 h1 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #9e0000;
+  text-transform: uppercase;
+  opacity: 0.2;
+  font-size: 70px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 10vh;
 }
 
 .projet2 {
@@ -161,26 +209,12 @@ header .btn:hover {
   padding: 0;
 }
 
-.overlay-image {
-  transition: background-color linear 300ms;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-
-.overlay-image:hover {
-  transition: background-color linear 300ms;
-  background-color: rgba(191, 167, 116, 0.9);
-}
-
 .projet3 {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 600px;
-  background-image: url("../images/4.jpg");
+  /*background-image: url('../images/4.jpg');*/
   background-size: cover;
   border-radius: 0px;
   letter-spacing: 0.1em;
@@ -188,6 +222,9 @@ header .btn:hover {
   padding: 0;
 }
 
+/*.projet3:hover {
+
+}*/
 .projet4 {
   display: flex;
   align-items: center;
@@ -256,4 +293,11 @@ footer {
   justify-content: space-between;
   color: var(--gray);
   border-top: 1px solid var(--gray);
-}/*# sourceMappingURL=work_style.css.map */
+}
+
+/**
+ * Header
+ */
+/**
+ * Sections
+ *//*# sourceMappingURL=work_style.css.map */

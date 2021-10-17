@@ -8,25 +8,25 @@ variables
 $navGradient: linear-gradient(0.50turn, #e6d8e6, #fef9ff); //opacité 0.14
 
 
-//////////////////////////////polices
+@font-face {
+    font-family: "Open Sans";
+    src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
+           url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
 
-// INCONSOLATA
-//<link rel="preconnect" href="https://fonts.googleapis.com">
-//<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-//<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet"> 
+    font-family: 'Montserrat', sans-serif;
+    src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
 
-// SOURCE CODE PRO
-//<link rel="preconnect" href="https://fonts.googleapis.com">
-//<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-//<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet"> 
+    font-family: 'Monoton', cursive;
+    src: url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
-// NUNITO
-//<link rel="preconnect" href="https://fonts.googleapis.com">
-//<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-//<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet"> 
+    font-family: 'Goldman', cursive;
+    src: url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+   }
+   
 
 
 $fontHelvetica : "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$fontMonserrat : 'Montserrat', sans-serif;
 
 
 //couleur police

@@ -1,4 +1,16 @@
+
+
+
+
+
+
 window.onload = function() {
+  /*
+  * ------------------------------
+  * Effet Parallax page HOME
+  * ------------------------------
+  */ 
+ 
     // Add event listener
     document.addEventListener("mousemove", parallax);
     const elem = document.querySelector("#parallax");
@@ -16,4 +28,18 @@ window.onload = function() {
         elem.style.backgroundPosition = x;
     }
 
+  /*
+  * --------------------------------
+  * Ouverture et fermeture du volet
+  * ---------------------------------
+  */
+    
+    document.getElementById("boutonVolet").addEventListener('click', ouvreFermeVolet);
+
+    // Fonction : ouvre / ferme le volet
+    function ouvreFermeVolet(){
+        let volet = document.getElementById("voletGauche");
+      volet.classList.toggle("ouvert");
+    }
 };
+
